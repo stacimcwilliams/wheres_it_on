@@ -8,28 +8,20 @@ class Welcome extends Component {
   }
 
 render() {
-  console.log(this.props.content);
+  const { content } = this.props
   return(
     <div>
-      "hi"
+      {content.map(show => {
+        return (
+          <div>
+            { show.id }
+          </div>
+        )
+      })}
+      <input placeholder="Search Content"/>
     </div>
+
   )
 }
 }
 export default Welcome;
-
-
-
-
-
-
-// <div>
-//   {content.map(show => {
-//     return (
-//       <div>
-//         { show.posters }
-//       </div>
-//     )
-//   })}
-//   <input placeholder="Search Content"/>
-// </div>
