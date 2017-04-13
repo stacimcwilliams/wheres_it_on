@@ -1,19 +1,35 @@
 import React, { Component } from 'react';
-import { Route, Link, NavLink } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 
 class Welcome extends Component {
 
-componentWillMount() {
-
-}
+  componentDidMount(dispatch) {
+    this.props.fetchSearchContent();
+  }
 
 render() {
-  return (
+  console.log(this.props.content);
+  return(
     <div>
-      <h1>Hello</h1>
+      "hi"
     </div>
   )
 }
-
-
 }
+export default Welcome;
+
+
+
+
+
+
+// <div>
+//   {content.map(show => {
+//     return (
+//       <div>
+//         { show.posters }
+//       </div>
+//     )
+//   })}
+//   <input placeholder="Search Content"/>
+// </div>

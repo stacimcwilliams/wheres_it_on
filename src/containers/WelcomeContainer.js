@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { bindActionCreator } from 'redux';
+import { bindActionCreators } from 'redux';
 
-import * as actions from '../../actions';
-import Welcome from './Welcome';
+import * as actions from '../../src/actions';
+import Welcome from '../components/Welcome/Welcome';
 
 
 const mapStateToProps = state => {
@@ -14,5 +14,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 const WelcomeContainer = connect(mapStateToProps, mapDispatchToProps)(Welcome)
-
 export default WelcomeContainer

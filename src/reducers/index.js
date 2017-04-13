@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 
-import { tv } from './WelcomeReducer'
+import { shows } from './WelcomeReducer'
 
 const rootReducer = combineReducers({
   router: routerReducer,
-  tv
+  shows
 })
 
 export default rootReducer
