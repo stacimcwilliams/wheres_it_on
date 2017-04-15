@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import WelcomeContainer from '../../containers/WelcomeContainer';
+import SearchResultsContainer from '../../containers/SearchResultsContainer';
 
 import './App.css';
 
@@ -13,7 +14,9 @@ class App extends Component {
         </div>
         <p className="App-intro">
         </p>
-        <Route exact path='/welcome' component={ WelcomeContainer } />
+        <Route exact path='/' component={ WelcomeContainer } />
+        <Route exact path='/results'  component= {SearchResultsContainer} />
+
       </div>
     );
   }

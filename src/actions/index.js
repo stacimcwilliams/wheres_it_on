@@ -1,5 +1,3 @@
-import thunk from 'redux-thunk';
-
 export const getTv = shows => {
   return {
     type: 'GET_TV',
@@ -11,6 +9,13 @@ export const getContent = content => {
   return {
     type: 'GET_CONTENT',
     content
+  }
+}
+
+export const searchResults = results => {
+  return {
+    type: 'GET_RESULTS',
+    results
   }
 }
 
@@ -26,9 +31,10 @@ export const fetchRandomTv = () => {
   }
 }
 
-export const fetchSearchContent = () => {
+export const fetchSearchContent = (query) => {
   return dispatch => {
-    fetch('http://api-public.guidebox.com/v2/search?api_key=4880f91cb81427902043ea748366f22d56311e96&type=movie&field=title&query=Terminator')
+    
+    fetch(`http://api-public.guidebox.com/v2/search?api_key=4880f91cb81427902043ea748366f22d56311e96&type=movie&field=title&query=${query}`)
     .then((response) => {
       return response.json()
     })

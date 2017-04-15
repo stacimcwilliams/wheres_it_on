@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route } from 'react-router-dom';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 // import WelcomeContainer from '../src/containers/WelcomeContainer'
 // import App from '../components/App/App';

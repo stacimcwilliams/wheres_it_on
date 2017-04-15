@@ -1,27 +1,44 @@
 import React, { Component } from 'react';
-// import { Route } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import SearchResultsContainer from '../../containers/SearchResultsContainer'
 
 class Welcome extends Component {
-
+  constructor() {
+    super()
+    this.state = {
+      query: ''
+    }
+  }
   componentDidMount(dispatch) {
     this.props.fetchSearchContent();
   }
 
-render() {
-  const { content } = this.props
-  return(
-    <div>
-      {content.map(show => {
-        return (
-          <div>
-            { show.id }
-          </div>
-        )
-      })}
-      <input placeholder="Search Content"/>
-    </div>
+  handleInput(e) {
+    this.setState({
+      query: e.target.value
+    })
+  }
 
-  )
-}
+  handleClick() {
+      this.props.fetchSearchContent(this.state.query)
+      console.log('handleClick fired');
+  }
+
+  render() {
+    const { content } = this.props
+    return(
+      <div>
+        <input placeholder="search" onChange={this.handleInput.bind(this)}/>
+        <NavLink className="submit" onClick={this.handleClick.bind(this)} to='/results'>Submit</NavLink>
+      </div>
+    )
+  }
 }
 export default Welcome;
+/*
+/* <img src=“smiley.gif” alt=“Smiley face” height=“42” width=“42"> */
+/* // id={ show.id
+// title={show.title}
+// <img src="show.poster_120x171" alt="poster"/> */
+{/* <button onClick={this.handleClick.bind(this)}>Submit</button> */}
