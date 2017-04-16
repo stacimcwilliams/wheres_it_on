@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import './SearchResults.css';
 
 class SearchResults extends Component {
 
-handleClick(showId) {
-  this.props.fetchSingleResult(showId)
-}
+  handleClick(showId) {
+    this.props.fetchSingleResult(showId)
+  }
 
   render() {
     const { shows } = this.props
-    const content = Object.keys(shows).map((show,i ) => {
-      let onItemClick = this.handleClick(shows[show].id)
+    const content = Object.keys(shows).map((show) => {
+      // let onItemClick = this.handleClick(shows[show].id)
       return(
-        <div key={i}>
-          <p>{shows[show].title}</p>
-        <NavLink to='/summary'><img onClick={onItemClick}  src={shows[show].poster_120x171} /></NavLink>
+        <div className="results-page" key={show}>
+          <NavLink to='/summary'>
+            <img className="poster" onClick={this.handleClick.bind(this,shows[show].id)} src={shows[show].poster_120x171} />
+          </NavLink>
         </div>
       )
     })
@@ -28,3 +30,4 @@ handleClick(showId) {
 }
 
 export default SearchResults
+  // <p className="show-title">{shows[show].title}</p>

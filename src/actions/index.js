@@ -28,7 +28,7 @@ export const singleResult = summary => {
 
 export const fetchRandomTv = () => {
   return dispatch => {
-    fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=4880f91cb81427902043ea748366f22d56311e96')
+    fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894')
     .then((response) => {
       return response.json()
     })
@@ -41,7 +41,7 @@ export const fetchRandomTv = () => {
 export const fetchSearchContent = (query) => {
   return dispatch => {
 
-    fetch(`http://api-public.guidebox.com/v2/search?api_key=4880f91cb81427902043ea748366f22d56311e96&type=movie&field=title&query=${query}`)
+    fetch(`http://api-public.guidebox.com/v2/search?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894&type=movie&field=title&query=${query}`)
     .then((response) => {
       return response.json()
     })
@@ -53,12 +53,13 @@ export const fetchSearchContent = (query) => {
 
 export const fetchSingleResult = (showId) => {
   return dispatch => {
-    fetch(`http://api-public.guidebox.com/v2/movies/${showId}?api_key=4880f91cb81427902043ea748366f22d56311e96`)
+    fetch(`http://api-public.guidebox.com/v2/movies/${showId}?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894`)
     .then((response) => {
       return response.json()
     })
     .then((summary) => {
-      dispatch(singleResult(summary.results))
+      console.log(summary)
+      dispatch(singleResult(summary))
     })
   }
 }
