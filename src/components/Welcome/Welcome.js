@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {  NavLink } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import SearchResultsContainer from '../../containers/SearchResultsContainer'
+import './Welcome.css'
 
 class Welcome extends Component {
   constructor() {
@@ -28,8 +29,8 @@ class Welcome extends Component {
     const { content } = this.props
     return(
       <div>
-        <input placeholder="search" onChange={this.handleInput.bind(this)}/>
-        <NavLink className="submit" onClick={this.handleClick.bind(this)} to='/results'>Submit</NavLink>
+        <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>
+        <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results'>Submit</NavLink>
       </div>
     )
   }
