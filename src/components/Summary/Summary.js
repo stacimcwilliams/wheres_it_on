@@ -5,10 +5,21 @@ class Summary extends Component {
 
 
 render(){
-  console.log(this.props)
+  const { summary } = this.props
+  let single = Object.keys(summary).map((movie) => {
+    return(
+      <div>
+        <img src={ summary[movie].poster_120x171} />
+        <p>{ summary[movie].title }</p>
+        <p>{ summary[movie].rating}</p>
+        <p>{ summary[movie].release_date}</p>
+        <p>{ summary[movie].overview}</p>
+      </div>
+    )
+  })
   return (
     <div>
-      {this.props.summary.title}
+      { single }
     </div>
   )
 }

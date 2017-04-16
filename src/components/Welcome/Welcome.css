@@ -1,0 +1,19 @@
+.submit-navlink{
+color: black;
+display: block;
+margin: 20px;
+}
+
+.submit-navlink:focus{
+  outline: none;
+  border: none;
+}
+.search-input{
+  width: 200px;
+  height: 25px;
+  border: solid 2px black;
+}
+
+.search-input:focus{
+  outline: none;
+}

@@ -1,17 +1,28 @@
 
+.movie-container{
 
-.show-title{
-  color: yellow;
 }
 
-.poster{
+.poster-card{
+  width: 125px;
+  padding: 10px;
+  text-align: center;
+  margin     : 10px 0px;
+  transition : all .5s ease-in-out;
+}
+
+.poster-card img{
+  border: 20px solid black;
+}
+
+.content-card{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-basis: 1;
 }
 
-.poster {
-  width      : 200px;
-  margin     : 10px 0px;
-  transition : all .5s ease-in-out;
+.main-navlink{
+  text-align: center;
+  color: black;
 }

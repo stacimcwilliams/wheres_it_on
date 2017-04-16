@@ -13,21 +13,21 @@ class SearchResults extends Component {
     const content = Object.keys(shows).map((show) => {
       // let onItemClick = this.handleClick(shows[show].id)
       return(
-        <div className="results-page" key={show}>
+        <div className="movie-container" key={show}>
           <NavLink to='/summary'>
-            <img className="poster" onClick={this.handleClick.bind(this,shows[show].id)} src={shows[show].poster_120x171} />
-          </NavLink>
-        </div>
-      )
-    })
-    return (
-      <div>
-      <NavLink to="/">Main</NavLink>
-       { content }
+          <img className="poster-card" onClick={this.handleClick.bind(this,shows[show].id)} src={shows[show].poster_120x171} />
+        </NavLink>
       </div>
     )
+  })
+  return (
+    <div className="content-card">
+      <NavLink className="main-navlink" to="/">Main</NavLink>
+      { content }
+    </div>
+  )
   }
 }
 
 export default SearchResults
-  // <p className="show-title">{shows[show].title}</p>
+// <p className="show-title">{shows[show].title}</p>
