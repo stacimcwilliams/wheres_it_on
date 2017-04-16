@@ -1,0 +1,17 @@
+
+
+.show-title{
+  color: yellow;
+}
+
+.poster{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.poster {
+  width      : 200px;
+  margin     : 10px 0px;
+  transition : all .5s ease-in-out;
+}

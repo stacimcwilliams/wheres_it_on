@@ -6,7 +6,7 @@ import Summary from '../components/Summary/Summary';
 
 
 const mapStateToProps = state => {
-  return {summary: state.shows}
+  return state
 }
 
 const mapDispatchToProps = dispatch => {

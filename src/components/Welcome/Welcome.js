@@ -22,7 +22,6 @@ class Welcome extends Component {
 
   handleClick() {
       this.props.fetchSearchContent(this.state.query)
-      console.log('handleClick fired');
   }
 
   render() {
