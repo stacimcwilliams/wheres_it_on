@@ -25,11 +25,7 @@ export const singleResult = summary => {
     summary
   }
 }
-<<<<<<< HEAD
-// 
-=======
 
->>>>>>> sm
 // export const fetchRandomTv = () => {
 //   return dispatch => {
 //     fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894')

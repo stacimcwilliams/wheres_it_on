@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-<<<<<<< HEAD
 import './Summary.css';
 
 class Summary extends Component {
@@ -14,21 +13,12 @@ getSources() {
     })
   })
 }
-
-
-render(){
-  const { summary } = this.props
-
-  let single = Object.keys(summary).map((movie, i) => {
-=======
-
-class Summary extends Component {
 render(){
   const { summary } = this.props
   console.log(summary);
 
-  let single = Object.keys(summary).map((movie) => {
->>>>>>> sm
+  let single = Object.keys(summary).map((movie, i) => {
+
     return(
       <div key= {i}>
         <img src={ summary[movie].poster_120x171} />
@@ -47,11 +37,7 @@ render(){
   return (
     <div>
       { single }
-<<<<<<< HEAD
       <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
-=======
-      <NavLink to='./'></NavLink>
->>>>>>> sm
     </div>
   )
 }
