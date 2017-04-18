@@ -36,9 +36,3 @@ class Welcome extends Component {
   }
 }
 export default Welcome;
-/*
-/* <img src=“smiley.gif” alt=“Smiley face” height=“42” width=“42"> */
-/* // id={ show.id
-// title={show.title}
-// <img src="show.poster_120x171" alt="poster"/> */
-{/* <button onClick={this.handleClick.bind(this)}>Submit</button> */}
