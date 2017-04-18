@@ -1,9 +1,9 @@
-export const getTv = shows => {
-  return {
-    type: 'GET_TV',
-    shows
-  }
-}
+// export const getTv = shows => {
+//   return {
+//     type: 'GET_TV',
+//     shows
+//   }
+// }
 
 export const getContent = content => {
   return {
@@ -26,17 +26,17 @@ export const singleResult = summary => {
   }
 }
 
-export const fetchRandomTv = () => {
-  return dispatch => {
-    fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894')
-    .then((response) => {
-      return response.json()
-    })
-    .then((shows) => {
-      dispatch(getTv(shows.results))
-    })
-  }
-}
+// export const fetchRandomTv = () => {
+//   return dispatch => {
+//     fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894')
+//     .then((response) => {
+//       return response.json()
+//     })
+//     .then((shows) => {
+//       dispatch(getTv(shows.results))
+//     })
+//   }
+// }
 
 export const fetchSearchContent = (query) => {
   return dispatch => {
@@ -46,7 +46,7 @@ export const fetchSearchContent = (query) => {
       return response.json()
     })
     .then((content) => {
-      dispatch(getContent(content.results))
+      dispatch(searchResults(content.results))
     })
   }
 }
@@ -58,7 +58,6 @@ export const fetchSingleResult = (showId) => {
       return response.json()
     })
     .then((summary) => {
-      console.log(summary)
       dispatch(singleResult(summary))
     })
   }

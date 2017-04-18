@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Summary extends Component {
-
-
-
 render(){
   const { summary } = this.props
+  console.log(summary);
+
   let single = Object.keys(summary).map((movie) => {
     return(
       <div>
@@ -20,6 +20,7 @@ render(){
   return (
     <div>
       { single }
+      <NavLink to='./'></NavLink>
     </div>
   )
 }

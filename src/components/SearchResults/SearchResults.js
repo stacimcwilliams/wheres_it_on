@@ -8,29 +8,34 @@ class SearchResults extends Component {
     this.props.fetchSingleResult(showId)
   }
 
+  componentWillReceiveProps(args) {
+    console.log('results receive props',args);
+  }
+
   render() {
-    const { shows } = this.props
-    const content = Object.keys(shows).map((show) => {
+    console.log('rendering search results');
+    const { results } = this.props
+    const content = Object.keys(results).map((result) => {
       // let onItemClick = this.handleClick(shows[show].id)
       return(
-        <div className="movie-container" key={show}>
+        <div className="movie-container" key={result}>
           <NavLink to='/summary'>
-          <img className="poster-card" onClick={this.handleClick.bind(this,shows[show].id)} src={shows[show].poster_120x171} />
+          <img className="poster-card" onClick={this.handleClick.bind(this,results[result].id)} src={results[result].poster_120x171} />
         </NavLink>
       </div>
     )
   })
   return (
     <div>
-    <div>
-    <NavLink className="main-navlink" to="/">Main</NavLink>
+      <div>
+        <NavLink className="main-navlink" to="/">Main</NavLink>
+      </div>
+      <div className="content-card">
+        { content }
+      </div>
     </div>
-    <div className="content-card">
-      { content }
-    </div>
-  </div>
   )
-  }
+}
 }
 
 export default SearchResults
