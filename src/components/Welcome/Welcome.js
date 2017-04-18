@@ -30,7 +30,7 @@ class Welcome extends Component {
     return(
       <div>
         <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>
-        <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results'>Submit</NavLink>
+        <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results' >Submit</NavLink>
       </div>
     )
   }
