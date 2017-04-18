@@ -21,10 +21,14 @@ class SearchResults extends Component {
     )
   })
   return (
+    <div>
+    <div>
+    <NavLink className="main-navlink" to="/">Main</NavLink>
+    </div>
     <div className="content-card">
-      <NavLink className="main-navlink" to="/">Main</NavLink>
       { content }
     </div>
+  </div>
   )
   }
 }
