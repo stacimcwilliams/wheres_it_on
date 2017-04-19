@@ -15,6 +15,11 @@ margin: 20px;
   margin-top: 12px;
 }
 
+.input-submit{
+  display: block;
+  text-align: center;
+}
+
 .search-input:focus{
   outline: none;
 }

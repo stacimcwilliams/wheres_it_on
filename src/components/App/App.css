@@ -12,7 +12,7 @@
 }
 
 body{
-  background-color: #4A4A4A;
+  background-color: #36413E;
   height: 100%;
   width: 100%;
 }
@@ -21,8 +21,8 @@ body{
 .App-header {
   width: 100%;
   height: 99px;
-  background-color: black;
-  color:white;
+  background-color: #85BDBF;
+  color: #0B132B;
   margin-top: 0;
 }
 

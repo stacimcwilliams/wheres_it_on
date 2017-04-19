@@ -14,7 +14,7 @@ class SearchResults extends Component {
       return(
         <div className="movie-container" key={result}>
           <NavLink to='/summary'>
-          <img className="poster-card" onClick={this.handleClick.bind(this,results[result].id)} src={results[result].poster_120x171} />
+          <img alt="movie-poster" className="poster-card" onClick={this.handleClick.bind(this,results[result].id)} src={results[result].poster_120x171} />
         </NavLink>
       </div>
     )
@@ -33,4 +33,3 @@ class SearchResults extends Component {
 }
 
 export default SearchResults
-// <p className="show-title">{shows[show].title}</p>

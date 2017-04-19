@@ -14,9 +14,14 @@ body{
   font-weight: 400;
 }
 
+.summary-title{
+  font-size: 20px;
+  ont-family: 'Chivo', sans-serif;
+  text-align: center;
+}
 
 .summary{
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
   color: black;
   font-family: 'Chivo', sans-serif;
@@ -26,10 +31,21 @@ body{
   width: 125px;
   padding: 10px;
   text-align: center;
-  margin: 10px 0px;
-  transition: all .5s ease-in-out;
 }
 
-.display_name{
-  color:black;
+.paid-subscription-sources{
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Chivo', sans-serif;
+}
+
+.header{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline black;
+
+}
+
+.purchase-link{
+  color: slategray;
 }

@@ -7,12 +7,17 @@
   width: 125px;
   padding: 10px;
   text-align: center;
-  margin     : 10px 0px;
-  transition : all .5s ease-in-out;
+  margin:10px;
+
 }
 
 .poster-card img{
   border: 20px solid black;
+}
+
+.movie-container img:hover {
+  transform:scale(1.05);
+  transition: all .5s ease-in-out;
 }
 
 .content-card{

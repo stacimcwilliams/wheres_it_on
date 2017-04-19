@@ -11,20 +11,22 @@ class Summary extends Component {
 
   displayPurchaseData(dataArray) {
     if(dataArray !== 0) {
-      return dataArray.map((data) => {
-        return (
-          <div className="purchase-options summary">
-            <p>Purchase Options</p>
-            <a href={data[1]} className="display_name">{data[0]}</a>
-            {data[2].map((format) => {
-              return (
-                <div>
-                  <p className="purchase-options">{format[0]} {format[2].toUpperCase()}: {format[3]} </p>
-                </div>
-              )
-            })}
-          </div>)
-        })
+      return (<div className="source-container">
+        <p className="header">Purchase Options</p>
+        { dataArray.map((data) => {
+          return (
+            <div>
+              <a href={data[1]} className="purchase-link">{data[0]}</a>
+              {data[2].map((format) => {
+                return (
+                  <div>
+                    <p>{format[0]} {format[2].toUpperCase()}: {format[3]} </p>
+                  </div>
+                )
+              })}
+            </div>
+          )})}
+        </div>)
       } else {
         return null
       }
@@ -41,8 +43,8 @@ class Summary extends Component {
 
     getSubscriptionData(data) {
       if(data.subscription_web_sources.length !== 0) {
-        return <div>
-          <p>Streaming On:</p>
+        return <div className="now-streaming">
+          <p className="header">Streaming On:</p>
           {data.subscription_web_sources.map((paid) => {
             return <p>{paid.display_name}</p>
           })}
@@ -63,17 +65,17 @@ class Summary extends Component {
         let displaySubscriptionData = this.getSubscriptionData(summary)
 
         return(
-          <div>
-            <p className="summary-title summary">{ summary.title }</p>
-            <img className="poster" src={ summary.poster_120x171 } />
-            {displaySubscriptionData}
-            {displayPurchaseSources}
+          <div className="movie-container">
+            <p className="summary-title">{ summary.title }</p>
+            <img className="poster-card" src={ summary.poster_120x171 } />
             <p className="summary-rating summary">{ summary.rating}</p>
             <p className="summary-release summary">{ summary.release_date}</p>
             <p className="summary-overview summary">{ summary.overview}</p>
-            <div>
-              <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
+            <div className="paid-subscription-sources">
+              {displaySubscriptionData}
+              {displayPurchaseSources}
             </div>
+
           </div>
         )
       } else {
@@ -90,14 +92,7 @@ class Summary extends Component {
 
 
   export default Summary
-  /* <p className="purchase-web-sources summary">Purchase Here:{this.purchase.display_name}</p> */
-  /* <p className="purchase-web-sources summary">Purchase Here: {summary.purchase_web_sources.map(src => <p className="purchase-source summary">{src.display_name} </p> )}</p> */
 
-  /* <p className="streaming-on summary">Streaming on: {summary.subscription_web_sources.map(src =>  <p className="streaming-services summary"> {src.display_name} </p>)}</p> */
-
-  /* <p className="purchase-web-sources summary">Purchase Here: {summary.purchase_web_sources.map(src => <p className="purchase-source summary">{src.display_name} </p> )}</p> */
-
-  {/* <article className="streaming-on summary">Streaming on: {summary.subscription_web_sources.map(src =>  <p className="streaming-services summary"> {src.display_name} </p>)}</article> */}
-
-
-  /* <p> {summary.subscription_web_sources.map(src =>  <p> {src.display_name} </p>)} </p> */
+  // <div>
+  //   <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
+  // </div>

@@ -31,13 +31,15 @@ class Welcome extends Component {
     let hboShows = shows.map(show => <img className="welcome-page" src={show.artwork_208x117}/>)
     return(
       <div className='welcome-container'>
-        <div>
+        <div className="input-submit">
           <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>
           <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results' >Submit</NavLink>
         </div>
-        {hboShows &&
-          hboShows
-        }
+        <div>
+          {hboShows &&
+            hboShows
+          }
+        </div>
 
       </div>
     )
