@@ -1,12 +1,12 @@
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import * as actions from '../../src/actions';
-import Welcome from '../components/Welcome/Welcome';
+import * as actions from '../../src/actions'
+import Welcome from '../components/Welcome/Welcome'
 
 
 const mapStateToProps = state => {
-  return {shows: state.shows};
+  return {shows: state.shows}
 }
 
 const mapDispatchToProps = dispatch => {

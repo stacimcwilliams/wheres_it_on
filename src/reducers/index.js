@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 
-import { shows,content } from './WelcomeReducer';
-import { results } from './SearchResultsReducer';
-import { summary } from './SummaryReducer';
+import { shows,content } from './WelcomeReducer'
+import { results } from './SearchResultsReducer'
+import { summary } from './SummaryReducer'
 
 
 

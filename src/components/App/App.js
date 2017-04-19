@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import WelcomeContainer from '../../containers/WelcomeContainer';
-import SearchResultsContainer from '../../containers/SearchResultsContainer';
-import SummaryContainer from '../../containers/SummaryContainer';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import WelcomeContainer from '../../containers/WelcomeContainer'
+import SearchResultsContainer from '../../containers/SearchResultsContainer'
+import SummaryContainer from '../../containers/SummaryContainer'
 
-import './App.css';
+import './App.css'
 
 class App extends Component {
   render() {
@@ -20,8 +20,8 @@ class App extends Component {
         <Route exact path='/summary' component= { SummaryContainer } />
 
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

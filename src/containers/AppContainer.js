@@ -5,7 +5,7 @@ import * as actions from '../../src/actions'
 import App from '../components/App/App'
 
 const mapStateToProps = state => {
-  return state;
+  return state
 }
 
 const mapDispatchToProps = dispatch => {

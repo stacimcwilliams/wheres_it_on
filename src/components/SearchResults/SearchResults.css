@@ -1,27 +1,27 @@
-.poster-card{
-  width: 125px;
-  padding: 10px;
-  text-align: center;
-  margin:10px;
+.poster-card {
+  width      : 125px;
+  margin     : 10px;
+  padding    : 10px;
+  text-align : center;
 }
 
-.poster-card img{
-  border: 20px solid black;
+.poster-card img {
+  border : 20px solid black;
 }
 
 .movie-container img:hover {
-  transform:scale(1.05);
-  transition: all .5s ease-in-out;
+  transform  : scale(1.05);
+  transition : all .5s ease-in-out;
 }
 
-.content-card{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-basis: 1;
+.content-card {
+  display         : flex;
+  flex-basis      : 1;
+  flex-wrap       : wrap;
+  justify-content : space-around;
 }
 
-.main-navlink{
-  text-align: center;
-  color: black;
+.main-navlink {
+  color      : black;
+  text-align : center;
 }

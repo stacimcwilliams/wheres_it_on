@@ -1,6 +1,6 @@
-import configureMockStore from 'redux-mock-store';
-import * as actions from '../../actions/index.js';
-import fetchMock from 'fetch-mock';
+import configureMockStore from 'redux-mock-store'
+import * as actions from '../../actions/index.js'
+import fetchMock from 'fetch-mock'
 
 
 const store = configureMockStore()()

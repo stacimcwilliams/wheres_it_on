@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import {  NavLink } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import {  NavLink } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import SearchResultsContainer from '../../containers/SearchResultsContainer'
 import './Welcome.css'
 
@@ -12,8 +12,8 @@ class Welcome extends Component {
     }
   }
   componentWillMount() {
-    this.props.fetchSearchContent();
-    this.props.fetchRandomTv();
+    this.props.fetchSearchContent()
+    this.props.fetchRandomTv()
   }
 
   handleInput(e) {
@@ -45,4 +45,4 @@ class Welcome extends Component {
     )
   }
 }
-export default Welcome;
+export default Welcome
