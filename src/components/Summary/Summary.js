@@ -55,7 +55,6 @@ class Summary extends Component {
     }
 
     render() {
-      console.log();
       const { purchaseSiteData } = this.state
       let { summary } = this.props
       summary = summary[0]
