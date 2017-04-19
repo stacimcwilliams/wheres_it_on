@@ -11,8 +11,13 @@ class Welcome extends Component {
       query: ''
     }
   }
-  componentDidMount(dispatch) {
+  componentDidMount() {
     this.props.fetchSearchContent();
+    this.props.fetchRandomTv();
+  }
+
+  componentWillReceiveProps(args) {
+    console.log('args', args);
   }
 
   handleInput(e) {
@@ -26,7 +31,8 @@ class Welcome extends Component {
   }
 
   render() {
-    const { content } = this.props
+    console.log('hbo-shows-welcome', this.props.shows);
+    console.log('args-welcome-render', this.componentWillReceiveProps(this.props.shows));
     return(
       <div>
         <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>

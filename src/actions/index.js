@@ -1,16 +1,16 @@
-// export const getTv = shows => {
-//   return {
-//     type: 'GET_TV',
-//     shows
-//   }
-// }
-
-export const getContent = content => {
+export const getTv = shows => {
   return {
-    type: 'GET_CONTENT',
-    content
+    type: 'GET_TV',
+    shows
   }
 }
+
+// export const getContent = content => {
+//   return {
+//     type: 'GET_CONTENT',
+//     content
+//   }
+// }
 
 export const searchResults = results => {
   return {
@@ -26,17 +26,17 @@ export const singleResult = summary => {
   }
 }
 
-// export const fetchRandomTv = () => {
-//   return dispatch => {
-//     fetch('http://api-public.guidebox.com/v2/movies/135934/images?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894')
-//     .then((response) => {
-//       return response.json()
-//     })
-//     .then((shows) => {
-//       dispatch(getTv(shows.results))
-//     })
-//   }
-// }
+export const fetchRandomTv = () => {
+  return dispatch => {
+    fetch('http://api-public.guidebox.com/v2/shows?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894&channel=hbo')
+    .then((response) => {
+      return response.json()
+    })
+    .then((shows) => {
+      dispatch(getTv(shows.results))
+    })
+  }
+}
 
 export const fetchSearchContent = (query) => {
   return dispatch => {

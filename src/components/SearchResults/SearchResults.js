@@ -14,6 +14,7 @@ class SearchResults extends Component {
 
   render() {
     console.log('rendering search results');
+    console.log('hbo',this.props.shows);
     const { results } = this.props
     const content = Object.keys(results).map((result) => {
       // let onItemClick = this.handleClick(shows[show].id)

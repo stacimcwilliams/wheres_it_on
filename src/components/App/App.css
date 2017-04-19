@@ -1,5 +1,14 @@
+/*@font-face{
+  font-family: 'Archivo Black', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Archivo+Black');
+}*/
+
 .App {
   text-align: center;
+  /*font-family: 'Volkhov', serif;*/
+  font-family: 'Archivo Black', sans-serif;
+
+  font-weight: bold;
 }
 
 body{
@@ -19,4 +28,5 @@ body{
 
 .title-header{
   height: 25px;
+  padding-top: 25px;
 }
