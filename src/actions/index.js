@@ -5,13 +5,6 @@ export const getTv = shows => {
   }
 }
 
-// export const getContent = content => {
-//   return {
-//     type: 'GET_CONTENT',
-//     content
-//   }
-// }
-
 export const searchResults = results => {
   return {
     type: 'GET_RESULTS',

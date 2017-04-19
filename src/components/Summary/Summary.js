@@ -55,7 +55,8 @@ class Summary extends Component {
     }
 
     render() {
-      const purchaseSiteData = this.state.purchaseSiteData
+      console.log();
+      const { purchaseSiteData } = this.state
       let { summary } = this.props
       summary = summary[0]
 
@@ -75,7 +76,6 @@ class Summary extends Component {
               {displaySubscriptionData}
               {displayPurchaseSources}
             </div>
-
           </div>
         )
       } else {
@@ -86,13 +86,6 @@ class Summary extends Component {
         )
       }
     }
-
-
   }
 
-
   export default Summary
-
-  // <div>
-  //   <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
-  // </div>

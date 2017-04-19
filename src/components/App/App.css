@@ -23,10 +23,7 @@ body{
   height: 99px;
   background-color: #85BDBF;
   color: #0B132B;
-  margin-top: 0;
-}
-
-.title-header{
-  height: 25px;
-  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
