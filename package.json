@@ -9,10 +9,19 @@
     "react-router": "^3.0.1",
     "react-router-dom": "^4.0.0",
     "react-router-redux": "^5.0.0-alpha.4",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "jest": "^19.0.2",
+    "enzyme": "^2.8.0",
+    "jest-environment-jsdom": "18.1.0",
+    "react-addons-test-utils": "^15.5.1",
+    "redux-mock-store": "^1.2.3"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "fetch-mock": "^5.10.0",
+    "jest-fetch-mock": "^1.0.8",
+    "mock-fetch-api": "^1.0.7",
+    "react-scripts": "0.9.5",
+    "redux-mock-store": "^1.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
