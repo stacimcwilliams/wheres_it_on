@@ -15,10 +15,8 @@ const mockData = {
   }]
 }
 
-const mockResults = [{}]
-
-
   afterEach(() => {
-    store.clearActions()
+    expect(fetchMock.calls().unmatched).toEqual([])
+    fetchMock.restore()
   })
 })

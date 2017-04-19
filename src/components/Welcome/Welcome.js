@@ -11,7 +11,7 @@ class Welcome extends Component {
       query: ''
     }
   }
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchSearchContent();
     this.props.fetchRandomTv();
   }
@@ -23,14 +23,22 @@ class Welcome extends Component {
   }
 
   handleClick() {
-      this.props.fetchSearchContent(this.state.query)
+    this.props.fetchSearchContent(this.state.query)
   }
 
   render() {
+    let { shows } = this.props
+    let hboShows = shows.map(show => <img className="welcome-page" src={show.artwork_208x117}/>)
     return(
-      <div>
-        <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>
-        <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results' >Submit</NavLink>
+      <div className='welcome-container'>
+        <div>
+          <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>
+          <NavLink className="submit-navlink" onClick={this.handleClick.bind(this)} to='/results' >Submit</NavLink>
+        </div>
+        {hboShows &&
+          hboShows
+        }
+
       </div>
     )
   }

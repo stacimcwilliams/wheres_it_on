@@ -10,7 +10,7 @@ class Summary extends Component {
   }
 
   displayPurchaseData(dataArray) {
-    if(dataArray !=0) {
+    if(dataArray !== 0) {
       return dataArray.map((data) => {
         return (
           <div className="purchase-options summary">
@@ -40,7 +40,7 @@ class Summary extends Component {
     }
 
     getSubscriptionData(data) {
-      if(data.subscription_web_sources.length != 0) {
+      if(data.subscription_web_sources.length !== 0) {
         return <div>
           <p>Streaming On:</p>
           {data.subscription_web_sources.map((paid) => {
@@ -71,9 +71,6 @@ class Summary extends Component {
             <p className="summary-rating summary">{ summary.rating}</p>
             <p className="summary-release summary">{ summary.release_date}</p>
             <p className="summary-overview summary">{ summary.overview}</p>
-
-
-
             <div>
               <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
             </div>
