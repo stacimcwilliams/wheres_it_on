@@ -8,16 +8,9 @@ class SearchResults extends Component {
     this.props.fetchSingleResult(showId)
   }
 
-  componentWillReceiveProps(args) {
-    console.log('results receive props',args);
-  }
-
   render() {
-    console.log('rendering search results');
-    console.log('hbo',this.props.shows);
     const { results } = this.props
     const content = Object.keys(results).map((result) => {
-      // let onItemClick = this.handleClick(shows[show].id)
       return(
         <div className="movie-container" key={result}>
           <NavLink to='/summary'>

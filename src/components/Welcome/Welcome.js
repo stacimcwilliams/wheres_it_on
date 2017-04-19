@@ -16,10 +16,6 @@ class Welcome extends Component {
     this.props.fetchRandomTv();
   }
 
-  componentWillReceiveProps(args) {
-    console.log('args', args);
-  }
-
   handleInput(e) {
     this.setState({
       query: e.target.value
@@ -31,8 +27,6 @@ class Welcome extends Component {
   }
 
   render() {
-    console.log('hbo-shows-welcome', this.props.shows);
-    console.log('args-welcome-render', this.componentWillReceiveProps(this.props.shows));
     return(
       <div>
         <input className="search-input" placeholder="search" onChange={this.handleInput.bind(this)}/>

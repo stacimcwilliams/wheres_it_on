@@ -6,7 +6,7 @@ import Welcome from '../components/Welcome/Welcome';
 
 
 const mapStateToProps = state => {
-  return {content: state.shows};
+  return {shows: state.shows};
 }
 
 const mapDispatchToProps = dispatch => {

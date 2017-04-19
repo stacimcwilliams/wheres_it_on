@@ -29,3 +29,7 @@ body{
   margin: 10px 0px;
   transition: all .5s ease-in-out;
 }
+
+.display_name{
+  color:black;
+}
