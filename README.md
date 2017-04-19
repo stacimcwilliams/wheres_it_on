@@ -22,9 +22,9 @@ I want to create an application that allows users to search for movies or TV sho
 - [Search Results](http://i.imgur.com/axCHKog.png)
 - [Search Results-refined](http://i.imgur.com/G6Hqddu.png)
 - [Entire sketch file](http://i.imgur.com/BAhxtVG.png)
-- [Summary Page](!http://i.imgur.com/fdXT4UC.png)
-- [Welcome Page](!http://i.imgur.com/kxa9tsd.png)
-- [Search Results Page](!http://i.imgur.com/AvgYqSU.png)
+- ![Summary Page](http://i.imgur.com/fdXT4UC.png)
+- ![Welcome Page](http://i.imgur.com/kxa9tsd.png)
+- ![Search Results Page](http://i.imgur.com/AvgYqSU.png)
 
 #### Waffle.io
 - [Link to waffle account](https://waffle.io/stacimcwilliams/wheres_it_on)
