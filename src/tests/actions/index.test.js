@@ -22,6 +22,7 @@ const mockData = {
     fetchMock.restore()
   })
 
+const mockResults = [{}]
 
 it('getTV', () => {
   let expectedAction = { type: 'GET_TV', shows: mockData.results}
@@ -34,26 +35,26 @@ it('getTV', () => {
 })
 
 it('searchResults', () => {
-  let expectedAction = { type: 'GET_TV', shows: mockData.results}
+  let expectedAction = { type: 'GET_RESULTS', results: mockData.results}
 
-  store.dispatch(actions.searchResults(mockData.results))
-  let createdAction = store.getActions()
-
-  expect(createdAction.length).toEqual(2)
-  expect(createdAction[0]).toEqual(expectedAction)
-})
-
-it('singleResult', () => {
-  let expectedAction = { type: 'GET_SINGLE', shows: mockData.results}
-
-  store.dispatch(actions.searchResults(mockData.results))
+  store.dispatch(actions.searchResults(mockData.results)
   let createdAction = store.getActions()
 
   expect(createdAction.length).toEqual(1)
   expect(createdAction[0]).toEqual(expectedAction)
 })
 
-xit('it creates getTV when initiating fetchRandomTv action', () => {
+it('singleResult', () => {
+  let expectedAction = { type: 'GET_SINGLE', summary: mockData.results}
+
+  store.dispatch(actions.singleResult(mockData.results))
+  let createdAction = store.getActions()
+
+  expect(createdAction.length).toEqual(3)
+  expect(createdAction[0]).toEqual(expectedAction)
+})
+
+it('it creates getTV when initiating fetchRandomTv action', () => {
   let expectedAction = { type: 'fetchRandomTv', shows: mockData.results}
 
   store.dispatch(fetchRandomTv(mockData.results))
