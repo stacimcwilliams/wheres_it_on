@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
-import './Summary.css'
+import React, { Component } from "react"
+import { NavLink } from "react-router-dom"
+import "./Summary.css"
 
 class Summary extends Component {
   constructor() {
@@ -13,13 +13,13 @@ class Summary extends Component {
     if(dataArray !== 0) {
       return (<div className="source-container">
         <p className="header">Purchase Options</p>
-        { dataArray.map((data) => {
+        { dataArray.map((data, i) => {
           return (
-            <div>
+            <div key={i}>
               <a href={data[1]} className="purchase-link">{data[0]}</a>
-              {data[2].map((format) => {
+              {data[2].map((format, i) => {
                 return (
-                  <div>
+                  <div key={i}>
                     <p>{format[0]} {format[2].toUpperCase()}: {format[3]} </p>
                   </div>
                 )
@@ -55,7 +55,6 @@ class Summary extends Component {
     }
 
     render() {
-      const { purchaseSiteData } = this.state
       let { summary } = this.props
       summary = summary[0]
 
@@ -67,7 +66,7 @@ class Summary extends Component {
         return(
           <div className="movie-container">
             <p className="summary-title">{ summary.title }</p>
-            <img className="poster-card" src={ summary.poster_120x171 } />
+            <img alt="summary-poster" className="poster-card" src={ summary.poster_120x171 } />
             <p className="summary-rating summary">{ summary.rating}</p>
             <p className="summary-release summary">{ summary.release_date}</p>
             <p className="summary-overview summary">{ summary.overview}</p>
@@ -80,7 +79,7 @@ class Summary extends Component {
       } else {
         return (
           <div>
-            <NavLink className='return-to-main' to='./'>Return to Main Menu</NavLink>
+            <NavLink className="return-to-main" to="./">Return to Main Menu</NavLink>
           </div>
         )
       }

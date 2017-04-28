@@ -5,8 +5,6 @@ import { Route } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
-// import WelcomeContainer from '../src/containers/WelcomeContainer'
-// import App from '../components/App/App';
 import AppContainer from '../src/containers/AppContainer'
 import './index.css';
 import rootReducer from './reducers/index'

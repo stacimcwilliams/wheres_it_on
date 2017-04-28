@@ -16,9 +16,8 @@ class App extends Component {
         <p className="App-intro">
         </p>
         <Route exact path='/' component={ WelcomeContainer } />
-        <Route exact path='/results'  component= { SearchResultsContainer } />
-        <Route exact path='/summary' component= { SummaryContainer } />
-
+        <Route exact path='/results'  component={ SearchResultsContainer } />
+        <Route exact path='/summary' component={ SummaryContainer } />
       </div>
     )
   }

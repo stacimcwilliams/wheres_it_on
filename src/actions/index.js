@@ -1,27 +1,27 @@
 export const getTv = shows => {
   return {
-    type: 'GET_TV',
+    type: "GET_TV",
     shows
   }
 }
 
 export const searchResults = results => {
   return {
-    type: 'GET_RESULTS',
+    type: "GET_RESULTS",
     results
   }
 }
 
 export const singleResult = summary => {
   return {
-    type: 'GET_SINGLE',
+    type: "GET_SINGLE",
     summary
   }
 }
 
 export const fetchRandomTv = () => {
   return dispatch => {
-    fetch('http://api-public.guidebox.com/v2/shows?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894&channel=hbo')
+    fetch("http://api-public.guidebox.com/v2/shows?api_key=1f743328a3b39c6777948b0dc51a1f42a0f86894&channel=hbo")
     .then((response) => {
       return response.json()
     })
